@@ -13,7 +13,7 @@ Music study app with dual-pane sheet music visualization and synchronized audio 
 
 - React 18 + Vite
 - VexFlow 5.x for music notation rendering
-- Tailwind CSS for styling
+- Tailwind CSS v4 for styling
 - TypeScript
 
 ## Development
@@ -22,6 +22,29 @@ Music study app with dual-pane sheet music visualization and synchronized audio 
 bun install
 bun dev
 ```
+
+## Project Structure
+
+```
+src/
+├── components/
+│   ├── SheetMusicPane.tsx    # VexFlow wrapper with dropdown
+│   ├── MediaPlayer.tsx       # Audio player controls
+│   └── SyncController.tsx    # Sync info panel
+├── hooks/
+│   ├── useVexFlow.ts         # VexFlow rendering hook
+│   └── useAudioSync.ts       # Audio-to-measure sync
+├── lib/
+│   └── vexflow-helpers.ts    # VexFlow utilities + notation parser
+├── data/
+│   └── spanish-romance.ts    # Demo content (16 measures)
+├── App.tsx
+└── main.tsx
+```
+
+## Demo Content
+
+Includes "Spanish Romance" (Romanza) - 16 measures with synchronized playback points.
 
 ## License
 
